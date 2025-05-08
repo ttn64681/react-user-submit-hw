@@ -1,0 +1,35 @@
+import Image from 'next/image';
+import styles from './User.module.css';
+import Card from './Card';
+
+interface UserProps {
+  user: {
+    id: number;
+    name: string;
+    username: string;
+    imageUrl: string;
+    email: string;
+    password: string;
+  };
+};
+export default function User({ user }: UserProps) {
+    return (
+      <Card  className={styles.userItem}>
+        <Image className={styles.userImg}
+          src={user.imageUrl} 
+          alt={user.name}
+          width={100} 
+          height={100}
+          priority // priority means this image will be loaded first
+        />
+        <div  className={styles.userInfo}>
+          <h2>Name: {user.name}</h2>
+          <p>Username: {user.username}</p>
+          <p>Email: {user.email}</p>
+          <p>Password: {user.password}</p>
+          <p>Image URL: {user.imageUrl}</p>
+        </div>
+      </Card>
+    );
+  }
+  
