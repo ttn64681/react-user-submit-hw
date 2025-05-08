@@ -1,3 +1,7 @@
+# React User Submit Project
+
+A React/Nextjs application that renders the image, name, id, username, and email of all the current users.  Initial data is provided for one user. Implements a signup component for adding new users. On submit of the form, the new user will be added to the rendered users. 
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
